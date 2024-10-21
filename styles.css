@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.picture-container {
+    width: 600px;
+    height: auto;
+    overflow: hidden;
+}
+
+#picture {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+}
