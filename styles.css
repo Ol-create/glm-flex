@@ -1,16 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@50;500;700&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container-body {
+    display: flex;
     flex-direction: row-reverse;
+    background-color: #004b23;
+    border-radius: 7px;
+    overflow: hidden;
+    width: 90%;
+}
+
+#text-content {
+  flex: 7;
+  width: 400px;
+  padding-left: 20px;
+}
+
+#slogan {
+    height: 150px;
+    padding-top: 0;
+    font-size: 50px;
+}
+
+#talent-text {
+    font-size: medium; 
+    padding-right: 15px;
 }
 
 .picture-container {
-    width: 600px;
+    flex: 5;
     height: auto;
-    overflow: hidden;
 }
 
 #picture {
-    width: 400px;
+    width: 600px;
     height: 100%;
     object-fit: cover;
+}
+
+#picture-md {
+    display: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.icons img {
+    width: 15px;
+    height: 15px;
+    padding-right: 7px;
+}
+
+.icon-text {
+    padding-right: 15px;
+}
+
+#btn {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#btn:hover {
+    background-color: #d9d9d9;
+}
+
+
+@media only screen and (max-width: 760px) {
+
+    .container {
+       display: flex;
+       flex-direction: column;
+       height: max-content;
+    }
+
+    .container-body {
+        flex-direction: column;
+        width: 100%;
+    }
+   
+    #slogan {
+        height: 100px;
+        font-size: 30px;
+    }
+    #text-content, .picture-container, #picture {
+        width: 100%;
+    }
+    
+#text-content {
+    padding-right: 20px;
+  }
+  #talent-text {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1200px) {
+     #picture {
+        display: none;
+     }
+
+     #picture-md {
+        display: block;
+        width: 45vw;
+     }
+
+     #text-content {
+        width: 50vw;
+        padding-right: 5px;
+      }
+
+      #slogan {
+        font-size: 40px;
+      }
+}
+
+@media only screen and (min-width: 1600px) {
+    .container-body { 
+        width: 80%;
+    }
+
+    #picture {
+        width: 800px;
+    }
+
+    
 }
